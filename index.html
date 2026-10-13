@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#" onclick="navigateTo('index')">Management System</a>
+            <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="bi bi-list text-white fs-2"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li class="guest-item"><a class="dropdown-item" href="#"
+                                    onclick="navigateTo('login')">Login</a></li>
+                            <li class="guest-item"><a class="dropdown-item" href="#" onclick="navigateTo('login')">Sign
+                                    Up</a></li>
+
+                            <li class="auth-item d-none"><a class="dropdown-item" href="#"
+                                    onclick="navigateTo('home')">Courses</a></li>
+                            <li class="auth-item d-none"><a class="dropdown-item" href="javascript:void(0)"
+                                    onclick="handleLogout()">Logout</a></li>
+
+                            <li><a class="dropdown-item" href="#">Help</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app-container">
+
+        <section id="view-index" class="view-section active">
+            <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="photo-1454165804606-c3d57bc86b40.avif" class="d-block w-100" alt="Achieve Your Goals"
+                            onerror="this.src='https://placehold.co/1200x800/1e293b/ffffff?text=Achieve+Goals'">
+                        <div class="carousel-caption-custom">
+                            <h6 class="text-uppercase tracking-wider fw-bold text-white-50 mb-2">Work Smarter</h6>
+                            <h1>Achieve Your Goals</h1>
+                            <p>Track progress, manage information, and improve productivity with a clear and organized
+                                workflow.</p>
+                            <button class="btn-custom" onclick="navigateTo('login')">Login Now &rarr;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo-1521737711867-e3b97375f902.avif" class="d-block w-100" alt="Team Collaboration"
+                            onerror="this.src='https://placehold.co/1200x800/1e293b/ffffff?text=Team+Collaboration'">
+                        <div class="carousel-caption-custom">
+                            <h6 class="text-uppercase tracking-wider fw-bold text-white-50 mb-2">Work Together</h6>
+                            <h1>Better Team Collaboration</h1>
+                            <p>Keep your team connected, organize responsibilities, and manage tasks in one convenient
+                                place.</p>
+                            <button class="btn-custom" onclick="navigateTo('login')">Join Us &rarr;</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo-1497366811353-6870744d04b2.avif" class="d-block w-100"
+                            alt="Management Made Simple"
+                            onerror="this.src='https://placehold.co/1200x800/1e293b/ffffff?text=Management+Made+Simple'">
+                        <div class="carousel-caption-custom">
+                            <h6 class="text-uppercase tracking-wider fw-bold text-white-50 mb-2">Welcome to our platform
+                            </h6>
+                            <h1>Management Made Simple</h1>
+                            <p>Simplify your work, stay organized, and achieve more with our easy-to-use management
+                                system.</p>
+                            <button class="btn-custom" onclick="navigateTo('home')">Get Started &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="goal-section">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <span class="section-title">Our Goal</span>
+                        <h2 class="display-6 fw-bold mt-2 text-dark">Goal of This Website</h2>
+                        <p class="lead text-muted mx-auto mt-3" style="max-width: 800px;">
+                            Our goal is to provide a simple, secure, and efficient management system that helps users
+                            organize their work, manage information, track progress, and improve productivity — all in
+                            one place.
+                        </p>
+                    </div>
+
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-lg-5">
+                            <img src="photo-1497366754035-f200968a6e72.avif" alt="Office Space"
+                                class="w-100 goal-img shadow-sm"
+                                onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Office+Space'">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="row g-4 h-100">
+                                <div class="col-md-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
+                                        <h5 class="fw-bold">Easy to Use</h5>
+                                        <p class="text-muted mb-0">A simple and clear interface for every user.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon"><i class="bi bi-lock-fill"></i></div>
+                                        <h5 class="fw-bold">Secure</h5>
+                                        <p class="text-muted mb-0">Keep information protected with appropriate security.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon"><i
+                                                class="bi bi-lightning-charge-fill text-warning"></i></div>
+                                        <h5 class="fw-bold">Efficient</h5>
+                                        <p class="text-muted mb-0">Save time by keeping tasks and information organized.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon"><i class="bi bi-graph-up-arrow text-success"></i>
+                                        </div>
+                                        <h5 class="fw-bold">Better Productivity</h5>
+                                        <p class="text-muted mb-0">Track progress and work toward your goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5 bg-light text-center">
+                <div class="container my-4">
+                    <h2 class="fw-bold mb-3">Ready to Get Started?</h2>
+                    <p class="text-muted mb-4">Create your account and start organizing your work today.</p>
+                    <button class="btn-custom" onclick="navigateTo('login')">Create an Account</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-login" class="view-section">
+            <div class="login-wrapper">
+                <div class="login-card">
+                    <div class="text-center mb-4">
+                        <div class="logo-circle">M</div>
+                        <h3 class="fw-bold">Welcome Back!</h3>
+                        <p class="text-muted small">Sign in to continue to your account.</p>
+                    </div>
+
+                    <h5 class="fw-bold mb-1">Login to your account</h5>
+                    <p class="text-muted small mb-4">Enter your email and password to get started.</p>
+
+                    <form id="loginForm" onsubmit="handleLogin(event)">
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium" for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" class="form-control form-control-lg bg-light fs-6"
+                                placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label small fw-medium mb-0" for="passwordInput">Password</label>
+                                <a href="#" class="text-decoration-none small"
+                                    style="color: var(--accent-color);">Forgot password?</a>
+                            </div>
+                            <div class="password-container mt-2">
+                                <input type="password" id="passwordInput"
+                                    class="form-control form-control-lg bg-light fs-6" placeholder="Enter your password"
+                                    required>
+                                <a href="javascript:void(0)" class="password-toggle" onclick="togglePassword()">Hiện</a>
+                            </div>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label small text-muted" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100 rounded-2 py-2">Sign In</button>
+                    </form>
+
+                    <div class="text-center mt-4 pt-2">
+                        <p class="small text-muted mb-0">Don't have an account? <a href="javascript:void(0)"
+                                class="text-decoration-none fw-medium" style="color: var(--accent-color);">Create an
+                                account</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-home" class="view-section">
+            <div class="courses-hero">
+                <div class="container">
+                    <h1 class="fw-bold text-dark display-5 mb-3">Welcome to My Website</h1>
+                    <p class="text-muted fs-5">Learn web development with our courses.</p>
+                </div>
+            </div>
+
+            <div class="py-5" style="background-color: var(--bg-light);">
+                <div class="container">
+                    <h3 class="fw-bold text-center mb-5">Our Courses</h3>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="course-card card-html">
+                                <h3>HTML</h3>
+                                <p>Learn how to create the structure of web pages using headings, paragraphs, images,
+                                    and links.</p>
+                                <button class="btn-course"
+                                    onclick="showCourseDetails('HTML', 'HTML stands for HyperText Markup Language. It creates the structure of a web page using headings, paragraphs, images, and links.')">Learn
+                                    More</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="course-card card-css">
+                                <h3>CSS</h3>
+                                <p>Learn how to style web pages with colors, fonts, spacing, and attractive layouts.</p>
+                                <button class="btn-course"
+                                    onclick="showCourseDetails('CSS', 'CSS stands for Cascading Style Sheets. It controls the appearance of web pages, including colors, fonts, spacing, and layouts.')">Learn
+                                    More</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="course-card card-bootstrap">
+                                <h3>Bootstrap</h3>
+                                <p>Build responsive websites quickly using Bootstrap's grid system and components.</p>
+                                <button class="btn-course"
+                                    onclick="showCourseDetails('Bootstrap', 'Bootstrap is a front-end framework. It provides ready-made components and a responsive grid system to build websites quickly.')">Learn
+                                    More</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="course-card card-js">
+                                <h3>JavaScript</h3>
+                                <p>Make web pages interactive with button clicks, form validation, and dynamic content.
+                                </p>
+                                <button class="btn-course"
+                                    onclick="showCourseDetails('JavaScript', 'JavaScript is a programming language that makes web pages interactive. It can handle button clicks, form validation, popups, and dynamic content.')">Learn
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            Copyright &copy; 2026 Management System. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title text-muted fs-6" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <h3 id="modalCourseTitle" class="fw-bold mb-3">Course Title</h3>
+                    <p id="modalCourseDesc" class="text-muted">Course description goes here.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 9999">
+        <div id="appToast" class="toast align-items-center text-white bg-success border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fs-6 fw-medium d-flex align-items-center">
+                    <i id="appToastIcon" class="bi bi-check-circle-fill me-2"></i>
+                    <span id="appToastMessage">Action successful!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
